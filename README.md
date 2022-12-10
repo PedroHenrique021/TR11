@@ -4,6 +4,7 @@ BAIXANDO O CÓDIGO:
 
 Clicando no botão verde com o nome Code, aparecerá a opção Download ZIP.
 Ao baixá-la você irá descompactar a pasta zip. Quando for descompactada, irá gerar uma pasta, contendo 4 arquivos.
+
 COMPILANDO O CÓDIGO:
 
 Para compilar, você irá abrir o terminal dentro da pasta em que o arquivos estão.
