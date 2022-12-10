@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "ordvetor.h"
 
-VETORORD* VETORD_create(int n, COMP* compara){ // creando a estrutura do vetor ordenado
+VETORORD* VETORD_create(int n, COMP* compara){ // criando a estrutura do vetor ordenado
     VETORORD* vetorord = malloc(sizeof(VETORORD));
     vetorord->comparador = compara;
     vetorord->N = n;
