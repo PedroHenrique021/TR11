@@ -2,20 +2,20 @@
 #include <stdlib.h>
 #include "ordvetor.h"
 
-VETORORD* VETORD_create(int n, COMP* compara){
+VETORORD* VETORD_create(int n, COMP* compara){ // creando a estrutura do vetor ordenado
     VETORORD* vetorord = malloc(sizeof(VETORORD));
     vetorord->comparador = compara;
     vetorord->N = n;
     vetorord->P = 0;
     vetorord->elems = malloc(n * sizeof(void *));
-    for(int i = 0;i<n;i++){
+    for(int i = 0;i<n;i++){ // setando as posiçoes do vetor como NULL
         vetorord->elems[i] = NULL;
     }
     return vetorord;
 }
 
 
-void VETORD_add(VETORORD* vetor, void* newelem){
+void VETORD_add(VETORORD* vetor, void* newelem){// funçao usada para adicionar elementos no vetor ordenado
     if (vetor->P < vetor->N) {
         if (vetor->P == 0) {
             vetor->elems[0] = newelem;
@@ -38,7 +38,7 @@ void VETORD_add(VETORORD* vetor, void* newelem){
     }
 }
 
-void* VETORD_remove(VETORORD* vetor){
+void* VETORD_remove(VETORORD* vetor){// funçao usada para remover elementos do vetor
     void* aux = vetor->elems[0];
     for(int i = 0;i<vetor->P;i++){
         vetor->elems[i] = vetor->elems[i+1]; 
